@@ -1,22 +1,47 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>KSU Map - Engineering Hall</title>
-		<meta charset="utf-8" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-  <body>
-    <div id="Map" class="Map">
-    <form>
-      <input id="bsearch" type="search" name="Search" placeholder="Search for Room, Building, or Class...">
-      <input id="submit" type="submit" name="submit" value="Search">
-    </form>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/search.css" rel="stylesheet" type="text/css" />
+<link href="css/map.css" rel="stylesheet" type="text/css" />
+<link href="css/footer.css" rel="stylesheet" type="text/css" />
+</head>     
+
+<body>
+<!--Make sure the form has the autocomplete function switched off:-->
+<form autocomplete="off" action="javascript:;" onsubmit="SearchLoc(this)" id="searchForm">
+  <div class="autocomplete">
+    <input id="myInput" type="text" name="myCountry" placeholder="Search for a Room">
   </div>
-  <div id="Level" class="OverlayBttn lvl1">1</div>
-  <div id="Level" class="OverlayBttn lvl2">2</div>
-  <div id="Level" class="OverlayBttn lvl3">3</div>
-  <div id="Level" class="OverlayBttn zoomin">+</div>
-  <div id="Level" class="OverlayBttn zoomout">-</div>
-    <script src="assets/js/main.js"></script>
-  </body>
+  <input type="Submit" value="Go">
+</form>
+<div id="openseadragon1" class="map"></div>
+<img id='pin' src='./img/pin.png' width="40">
+<script src="Scripts/openseadragon.js"></script>
+<script>
+    /*var viewer = OpenSeadragon({
+    id: "openseadragon1",
+    immediateRender: true,
+    showNavigator: false,
+    showNavigationControl: false,
+    defaultZoomLevel: 2,
+    minZoomLevel: 1,
+    maxZoomLevel: 15,
+    overlays: [{
+      id: 'pin',
+      px: 0,
+      py: 0,
+      placement: 'BOTTOM',
+      checkResize: false
+    }],
+    tileSources: "http://192.168.1.6:8182/iiif/2/B_1_L_1.tif"
+});
+var building = 1;
+var level = 1;*/
+</script>
+<script src="scripts/search.js"></script>
+<!--Add the map js only after viewer has been created!-->
+<script src="scripts/map.js"></script>
+<div class="footer" id="footer"><div class="HomeIcon"></div>Home</div>
+</body>
 </html>
