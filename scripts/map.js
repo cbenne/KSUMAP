@@ -34,7 +34,7 @@ function changeSource(building,level,element_id) {
         minZoomLevel: 1,
         maxZoomLevel: 15,
         overlays: new_overlays,
-        tileSources: "http://192.168.1.6:8182/iiif/2/B_" + building + "_L_"+ level +".tif"
+        tileSources: "http://3.17.87.208/iiif/2/B_" + building + "_L_"+ level +".tif"
     });
     return viewer;
 }
