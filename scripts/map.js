@@ -34,7 +34,7 @@ function changeSource(building,level,element_id) {
         minZoomLevel: 1,
         maxZoomLevel: 15,
         overlays: new_overlays,
-        tileSources: "https://tile.ksumap.com/iiif/2/B_" + building + "_L_"+ level +".tif"
+        tileSources: "http://tile.ksumap.com/iiif/2/B_" + building + "_L_"+ level +".tif"
     });
     return viewer;
 }
