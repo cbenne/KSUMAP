@@ -2,45 +2,23 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="css/search.css" rel="stylesheet" type="text/css" />
-<link href="css/map.css" rel="stylesheet" type="text/css" />
-<link href="css/footer.css" rel="stylesheet" type="text/css" />
+<link href="static/css/search.css" rel="stylesheet" type="text/css" />
+<link href="static/css/map.css"  rel="stylesheet" type="text/css" />
+<link href="static/css/footer.css"  rel="stylesheet" type="text/css" />
 </head>     
 
 <body>
 <!--Make sure the form has the autocomplete function switched off:-->
 <form autocomplete="off" action="javascript:;" onsubmit="SearchLoc(this)" id="searchForm">
   <div class="autocomplete">
-    <input id="myInput" type="text" name="myCountry" placeholder="Search for a Room">
+    <input id="roomInput" type="text" name="roomName" placeholder="Search for a Room">
   </div>
   <input type="Submit" value="Go">
 </form>
 <div id="openseadragon1" class="map"></div>
-<img id='pin' src='./img/pin.png' width="40">
-<script src="scripts/openseadragon.js"></script>
-<script>
-    /*var viewer = OpenSeadragon({
-    id: "openseadragon1",
-    immediateRender: true,
-    showNavigator: false,
-    showNavigationControl: false,
-    defaultZoomLevel: 2,
-    minZoomLevel: 1,
-    maxZoomLevel: 15,
-    overlays: [{
-      id: 'pin',
-      px: 0,
-      py: 0,
-      placement: 'BOTTOM',
-      checkResize: false
-    }],
-    tileSources: "http://192.168.1.6:8182/iiif/2/B_1_L_1.tif"
-});
-var building = 1;
-var level = 1;*/
-</script>
-<script src="scripts/search.js"></script>
-<script src="scripts/map.js"></script>
-<div class="footer" id="footer"><div class="HomeIcon"></div>Home</div>
+<script src="static/scripts/openseadragon.js"></script>
+<script src="static/scripts/map.js"></script>
+<script src="static/scripts/search.js"></script>
+<div class="footer" id="footer"><div class="HomeIcon"></div>Home<div id="ResultNode" class="footer-result"></div></div>
 </body>
 </html>

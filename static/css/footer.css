@@ -33,6 +33,12 @@
     margin: 10px;
 }
 
+.footer-result {
+    align-self: center;
+    text-align: center;
+    width: 100%;
+}
+
 img {
     vertical-align: middle;
 }
