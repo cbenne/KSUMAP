@@ -1,0 +1,768 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 326676480 bytes for committing reserved memory.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_linux.cpp:2746), pid=4877, tid=0x00007f7d60df3700
+#
+# JRE version: OpenJDK Runtime Environment (8.0_191-b12) (build 1.8.0_191-8u191-b12-0ubuntu0.18.04.1-b12)
+# Java VM: OpenJDK 64-Bit Server VM (25.191-b12 mixed mode linux-amd64 compressed oops)
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f7d5c096800):  VMThread [stack: 0x00007f7d60cf4000,0x00007f7d60df4000] [id=4879]
+
+Stack: [0x00007f7d60cf4000,0x00007f7d60df4000],  sp=0x00007f7d60df24d0,  free space=1017k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0xab2512]
+V  [libjvm.so+0x4d9e97]
+V  [libjvm.so+0x8ed690]
+V  [libjvm.so+0x8e47be]
+V  [libjvm.so+0xaaeea0]
+V  [libjvm.so+0x5e13fd]
+V  [libjvm.so+0x5e1fd1]
+V  [libjvm.so+0x5cd455]
+V  [libjvm.so+0x45995c]
+V  [libjvm.so+0xab344f]
+V  [libjvm.so+0xab8d96]
+V  [libjvm.so+0xab7035]
+V  [libjvm.so+0xab79ad]
+V  [libjvm.so+0xab7d87]
+V  [libjvm.so+0x8eaa42]
+
+VM_Operation (0x00007f7d4c7d7120): GenCollectForAllocation, mode: safepoint, requested by thread 0x00007f7d5c2e7000
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00007f7d5c184000 JavaThread "qtp20671747-29" [_thread_blocked, id=4905, stack(0x00007f7d2a667000,0x00007f7d2a768000)]
+  0x00007f7d3c46b800 JavaThread "qtp20671747-28" [_thread_blocked, id=4904, stack(0x00007f7d2a768000,0x00007f7d2a869000)]
+  0x00007f7d3c4ab000 JavaThread "qtp20671747-27" [_thread_blocked, id=4903, stack(0x00007f7d2a869000,0x00007f7d2a96a000)]
+  0x00007f7d34207800 JavaThread "cl-np-0000243677" daemon [_thread_blocked, id=4901, stack(0x00007f7d2ac6b000,0x00007f7d2ad6c000)]
+  0x00007f7d3c05e000 JavaThread "Scheduler-488970385" [_thread_blocked, id=4900, stack(0x00007f7d2b36c000,0x00007f7d2b46d000)]
+  0x00007f7d5c00b000 JavaThread "DestroyJavaVM" [_thread_blocked, id=4878, stack(0x00007f7d65939000,0x00007f7d65a39000)]
+  0x00007f7d5cbd5000 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=4899, stack(0x00007f7d2b66d000,0x00007f7d2b76e000)]
+  0x00007f7d34009800 JavaThread "Thread-11" daemon [_thread_blocked, id=4898, stack(0x00007f7d2c2ba000,0x00007f7d2c3bb000)]
+  0x00007f7d5cb07800 JavaThread "pool-1-thread-1" [_thread_blocked, id=4897, stack(0x00007f7d2c3bb000,0x00007f7d2c4bc000)]
+  0x00007f7d5cb07000 JavaThread "cl-lp-0076766814" daemon [_thread_blocked, id=4896, stack(0x00007f7d2c4bc000,0x00007f7d2c5bd000)]
+  0x00007f7d5caa1000 JavaThread "Scheduler-1376790324" [_thread_blocked, id=4895, stack(0x00007f7d2c5bd000,0x00007f7d2c6be000)]
+  0x00007f7d5c2ec800 JavaThread "qtp20671747-17" [_thread_blocked, id=4894, stack(0x00007f7d4c3d6000,0x00007f7d4c4d7000)]
+  0x00007f7d5c2ea800 JavaThread "qtp20671747-16" [_thread_blocked, id=4893, stack(0x00007f7d4c4d7000,0x00007f7d4c5d8000)]
+  0x00007f7d5c2e9000 JavaThread "qtp20671747-15" [_thread_blocked, id=4892, stack(0x00007f7d4c5d8000,0x00007f7d4c6d9000)]
+  0x00007f7d5c2e7000 JavaThread "qtp20671747-14" [_thread_blocked, id=4891, stack(0x00007f7d4c6d9000,0x00007f7d4c7da000)]
+  0x00007f7d5c2e5800 JavaThread "qtp20671747-13" [_thread_blocked, id=4890, stack(0x00007f7d4c7da000,0x00007f7d4c8db000)]
+  0x00007f7d5c2e4000 JavaThread "qtp20671747-12" [_thread_in_native, id=4889, stack(0x00007f7d4c8db000,0x00007f7d4c9dc000)]
+  0x00007f7d5c2e2000 JavaThread "qtp20671747-11-acceptor-0@553d5d51-ServerConnector@5bfab986{HTTP/1.1,[http/1.1]}{0.0.0.0:80}" [_thread_in_native, id=4888, stack(0x00007f7d4c9dc000,0x00007f7d4cadd000)]
+  0x00007f7d5c2e1000 JavaThread "qtp20671747-10" [_thread_blocked, id=4887, stack(0x00007f7d4cadd000,0x00007f7d4cbde000)]
+  0x00007f7d5c0de800 JavaThread "Service Thread" daemon [_thread_blocked, id=4885, stack(0x00007f7d603ae000,0x00007f7d604af000)]
+  0x00007f7d5c0db000 JavaThread "C1 CompilerThread1" daemon [_thread_blocked, id=4884, stack(0x00007f7d604b0000,0x00007f7d605b0000)]
+  0x00007f7d5c0d9000 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=4883, stack(0x00007f7d605b1000,0x00007f7d606b1000)]
+  0x00007f7d5c0d7800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=4882, stack(0x00007f7d606b1000,0x00007f7d607b2000)]
+  0x00007f7d5c0a3000 JavaThread "Finalizer" daemon [_thread_blocked, id=4881, stack(0x00007f7d60af1000,0x00007f7d60bf2000)]
+  0x00007f7d5c0a0800 JavaThread "Reference Handler" daemon [_thread_blocked, id=4880, stack(0x00007f7d60bf2000,0x00007f7d60cf3000)]
+
+Other Threads:
+=>0x00007f7d5c096800 VMThread [stack: 0x00007f7d60cf4000,0x00007f7d60df4000] [id=4879]
+  0x00007f7d5c0e1000 WatcherThread [stack: 0x00007f7d602ae000,0x00007f7d603ae000] [id=4886]
+
+VM state:at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00007f7d5c007c20] Threads_lock - owner thread: 0x00007f7d5c096800
+[0x00007f7d5c008120] Heap_lock - owner thread: 0x00007f7d5c2e7000
+
+Heap:
+ def new generation   total 173312K, used 10581K [0x0000000080000000, 0x000000008bc00000, 0x00000000aaaa0000)
+  eden space 154112K,   6% used [0x0000000080000000, 0x0000000080a55600, 0x0000000089680000)
+  from space 19200K,   0% used [0x0000000089680000, 0x0000000089680000, 0x000000008a940000)
+  to   space 19200K,   0% used [0x000000008a940000, 0x000000008a940000, 0x000000008bc00000)
+ tenured generation   total 478528K, used 478526K [0x00000000aaaa0000, 0x00000000c7df0000, 0x0000000100000000)
+   the space 478528K,  99% used [0x00000000aaaa0000, 0x00000000c7defb08, 0x00000000c7defc00, 0x00000000c7df0000)
+ Metaspace       used 32334K, capacity 32772K, committed 33536K, reserved 1077248K
+  class space    used 4571K, capacity 4724K, committed 4864K, reserved 1048576K
+
+Card table byte_map: [0x00007f7d61abc000,0x00007f7d61ebd000] byte_map_base: 0x00007f7d616bc000
+
+Polling page: 0x00007f7d65a40000
+
+CodeCache: size=245760Kb used=7165Kb max_used=7173Kb free=238594Kb
+ bounds [0x00007f7d4d000000, 0x00007f7d4d710000, 0x00007f7d5c000000]
+ total_blobs=2742 nmethods=2206 adapters=450
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 156.519 Thread 0x00007f7d5c0d9000 2503 %     4       sun.awt.image.ByteInterleavedRaster::getByteData @ 646 (851 bytes)
+Event: 156.541 Thread 0x00007f7d5c0d9000 nmethod 2503% 0x00007f7d4d708f90 code [0x00007f7d4d709100, 0x00007f7d4d709998]
+Event: 156.546 Thread 0x00007f7d5c0db000 2505       1       java.awt.image.BufferedImage::getType (5 bytes)
+Event: 156.546 Thread 0x00007f7d5c0db000 nmethod 2505 0x00007f7d4d6f8350 code [0x00007f7d4d6f84a0, 0x00007f7d4d6f85b0]
+Event: 156.546 Thread 0x00007f7d5c0d9000 2504       4       sun.awt.image.ByteInterleavedRaster::getByteData (851 bytes)
+Event: 156.555 Thread 0x00007f7d5c0d9000 nmethod 2504 0x00007f7d4d709cd0 code [0x00007f7d4d709e60, 0x00007f7d4d70a498]
+Event: 156.594 Thread 0x00007f7d5c0db000 2506       3       sun.awt.image.ByteInterleavedRaster::getDataElements (18 bytes)
+Event: 156.594 Thread 0x00007f7d5c0db000 nmethod 2506 0x00007f7d4d6f7e90 code [0x00007f7d4d6f8000, 0x00007f7d4d6f8280]
+Event: 156.595 Thread 0x00007f7d5c0db000 2507       3       edu.illinois.library.cantaloupe.processor.resample.ImageUtils::readPixelsBGR (280 bytes)
+Event: 156.595 Thread 0x00007f7d5c0db000 nmethod 2507 0x00007f7d4d704950 code [0x00007f7d4d704b80, 0x00007f7d4d7053b8]
+
+GC Heap History (10 events):
+Event: 155.146 GC heap after
+Heap after GC invocations=111 (full 4):
+ def new generation   total 50176K, used 0K [0x0000000080000000, 0x0000000083670000, 0x00000000aaaa0000)
+  eden space 44608K,   0% used [0x0000000080000000, 0x0000000080000000, 0x0000000082b90000)
+  from space 5568K,   0% used [0x0000000082b90000, 0x0000000082b90000, 0x0000000083100000)
+  to   space 5568K,   0% used [0x0000000083100000, 0x0000000083100000, 0x0000000083670000)
+ tenured generation   total 111304K, used 66781K [0x00000000aaaa0000, 0x00000000b1752000, 0x0000000100000000)
+   the space 111304K,  59% used [0x00000000aaaa0000, 0x00000000aebd77e0, 0x00000000aebd7800, 0x00000000b1752000)
+ Metaspace       used 31415K, capacity 31844K, committed 32384K, reserved 1077248K
+  class space    used 4474K, capacity 4628K, committed 4736K, reserved 1048576K
+}
+Event: 155.179 GC heap before
+{Heap before GC invocations=111 (full 4):
+ def new generation   total 50176K, used 1015K [0x0000000080000000, 0x0000000083670000, 0x00000000aaaa0000)
+  eden space 44608K,   2% used [0x0000000080000000, 0x00000000800fdcd0, 0x0000000082b90000)
+  from space 5568K,   0% used [0x0000000082b90000, 0x0000000082b90000, 0x0000000083100000)
+  to   space 5568K,   0% used [0x0000000083100000, 0x0000000083100000, 0x0000000083670000)
+ tenured generation   total 158180K, used 113656K [0x00000000aaaa0000, 0x00000000b4519000, 0x0000000100000000)
+   the space 158180K,  71% used [0x00000000aaaa0000, 0x00000000b199e3f0, 0x00000000b199e400, 0x00000000b4519000)
+ Metaspace       used 31432K, capacity 31844K, committed 32384K, reserved 1077248K
+  class space    used 4476K, capacity 4628K, committed 4736K, reserved 1048576K
+Event: 155.204 GC heap after
+Heap after GC invocations=112 (full 5):
+ def new generation   total 85376K, used 0K [0x0000000080000000, 0x0000000085ca0000, 0x00000000aaaa0000)
+  eden space 75904K,   0% used [0x0000000080000000, 0x0000000080000000, 0x0000000084a20000)
+  from space 9472K,   0% used [0x0000000084a20000, 0x0000000084a20000, 0x0000000085360000)
+  to   space 9472K,   0% used [0x0000000085360000, 0x0000000085360000, 0x0000000085ca0000)
+ tenured generation   total 189432K, used 113657K [0x00000000aaaa0000, 0x00000000b639e000, 0x0000000100000000)
+   the space 189432K,  59% used [0x00000000aaaa0000, 0x00000000b199e6e0, 0x00000000b199e800, 0x00000000b639e000)
+ Metaspace       used 31432K, capacity 31844K, committed 32384K, reserved 1077248K
+  class space    used 4476K, capacity 4628K, committed 4736K, reserved 1048576K
+}
+Event: 155.240 GC heap before
+{Heap before GC invocations=112 (full 5):
+ def new generation   total 85376K, used 48872K [0x0000000080000000, 0x0000000085ca0000, 0x00000000aaaa0000)
+  eden space 75904K,  64% used [0x0000000080000000, 0x0000000082fba2b8, 0x0000000084a20000)
+  from space 9472K,   0% used [0x0000000084a20000, 0x0000000084a20000, 0x0000000085360000)
+  to   space 9472K,   0% used [0x0000000085360000, 0x0000000085360000, 0x0000000085ca0000)
+ tenured generation   total 189432K, used 113657K [0x00000000aaaa0000, 0x00000000b639e000, 0x0000000100000000)
+   the space 189432K,  59% used [0x00000000aaaa0000, 0x00000000b199e6e0, 0x00000000b199e800, 0x00000000b639e000)
+ Metaspace       used 31447K, capacity 31844K, committed 32384K, reserved 1077248K
+  class space    used 4477K, capacity 4628K, committed 4736K, reserved 1048576K
+Event: 155.281 GC heap after
+Heap after GC invocations=113 (full 5):
+ def new generation   total 85376K, used 3K [0x0000000080000000, 0x0000000085ca0000, 0x00000000aaaa0000)
+  eden space 75904K,   0% used [0x0000000080000000, 0x0000000080000000, 0x0000000084a20000)
+  from space 9472K,   0% used [0x0000000085360000, 0x0000000085360c90, 0x0000000085ca0000)
+  to   space 9472K,   0% used [0x0000000084a20000, 0x0000000084a20000, 0x0000000085360000)
+ tenured generation   total 189432K, used 160532K [0x00000000aaaa0000, 0x00000000b639e000, 0x0000000100000000)
+   the space 189432K,  84% used [0x00000000aaaa0000, 0x00000000b47652f0, 0x00000000b4765400, 0x00000000b639e000)
+ Metaspace       used 31447K, capacity 31844K, committed 32384K, reserved 1077248K
+  class space    used 4477K, capacity 4628K, committed 4736K, reserved 1048576K
+}
+Event: 155.410 GC heap before
+{Heap before GC invocations=113 (full 5):
+ def new generation   total 85376K, used 72777K [0x0000000080000000, 0x0000000085ca0000, 0x00000000aaaa0000)
+  eden space 75904K,  95% used [0x0000000080000000, 0x0000000084711958, 0x0000000084a20000)
+  from space 9472K,   0% used [0x0000000085360000, 0x0000000085360c90, 0x0000000085ca0000)
+  to   space 9472K,   0% used [0x0000000084a20000, 0x0000000084a20000, 0x0000000085360000)
+ tenured generation   total 189432K, used 160532K [0x00000000aaaa0000, 0x00000000b639e000, 0x0000000100000000)
+   the space 189432K,  84% used [0x00000000aaaa0000, 0x00000000b47652f0, 0x00000000b4765400, 0x00000000b639e000)
+ Metaspace       used 31515K, capacity 31908K, committed 32640K, reserved 1077248K
+  class space    used 4483K, capacity 4628K, committed 4736K, reserved 1048576K
+Event: 155.501 GC heap after
+Heap after GC invocations=114 (full 6):
+ def new generation   total 173312K, used 0K [0x0000000080000000, 0x000000008bc00000, 0x00000000aaaa0000)
+  eden space 154112K,   0% used [0x0000000080000000, 0x0000000080000000, 0x0000000089680000)
+  from space 19200K,   0% used [0x0000000089680000, 0x0000000089680000, 0x000000008a940000)
+  to   space 19200K,   0% used [0x000000008a940000, 0x000000008a940000, 0x000000008bc00000)
+ tenured generation   total 384776K, used 230863K [0x00000000aaaa0000, 0x00000000c2262000, 0x0000000100000000)
+   the space 384776K,  59% used [0x00000000aaaa0000, 0x00000000b8c13cf8, 0x00000000b8c13e00, 0x00000000c2262000)
+ Metaspace       used 31515K, capacity 31908K, committed 32640K, reserved 1077248K
+  class space    used 4483K, capacity 4628K, committed 4736K, reserved 1048576K
+}
+Event: 155.614 GC heap before
+{Heap before GC invocations=114 (full 6):
+ def new generation   total 173312K, used 109760K [0x0000000080000000, 0x000000008bc00000, 0x00000000aaaa0000)
+  eden space 154112K,  71% used [0x0000000080000000, 0x0000000086b30040, 0x0000000089680000)
+  from space 19200K,   0% used [0x0000000089680000, 0x0000000089680000, 0x000000008a940000)
+  to   space 19200K,   0% used [0x000000008a940000, 0x000000008a940000, 0x000000008bc00000)
+ tenured generation   total 384776K, used 230863K [0x00000000aaaa0000, 0x00000000c2262000, 0x0000000100000000)
+   the space 384776K,  59% used [0x00000000aaaa0000, 0x00000000b8c13cf8, 0x00000000b8c13e00, 0x00000000c2262000)
+ Metaspace       used 32279K, capacity 32708K, committed 33280K, reserved 1077248K
+  class space    used 4569K, capacity 4724K, committed 4864K, reserved 1048576K
+Event: 155.707 GC heap after
+Heap after GC invocations=115 (full 6):
+ def new generation   total 173312K, used 11830K [0x0000000080000000, 0x000000008bc00000, 0x00000000aaaa0000)
+  eden space 154112K,   0% used [0x0000000080000000, 0x0000000080000000, 0x0000000089680000)
+  from space 19200K,  61% used [0x000000008a940000, 0x000000008b4cd8b8, 0x000000008bc00000)
+  to   space 19200K,   0% used [0x0000000089680000, 0x0000000089680000, 0x000000008a940000)
+ tenured generation   total 384776K, used 324613K [0x00000000aaaa0000, 0x00000000c2262000, 0x0000000100000000)
+   the space 384776K,  84% used [0x00000000aaaa0000, 0x00000000be7a1518, 0x00000000be7a1600, 0x00000000c2262000)
+ Metaspace       used 32279K, capacity 32708K, committed 33280K, reserved 1077248K
+  class space    used 4569K, capacity 4724K, committed 4864K, reserved 1048576K
+}
+Event: 157.377 GC heap before
+{Heap before GC invocations=115 (full 6):
+ def new generation   total 173312K, used 165813K [0x0000000080000000, 0x000000008bc00000, 0x00000000aaaa0000)
+  eden space 154112K,  99% used [0x0000000080000000, 0x000000008965fee8, 0x0000000089680000)
+  from space 19200K,  61% used [0x000000008a940000, 0x000000008b4cd8b8, 0x000000008bc00000)
+  to   space 19200K,   0% used [0x0000000089680000, 0x0000000089680000, 0x000000008a940000)
+ tenured generation   total 384776K, used 324613K [0x00000000aaaa0000, 0x00000000c2262000, 0x0000000100000000)
+   the space 384776K,  84% used [0x00000000aaaa0000, 0x00000000be7a1518, 0x00000000be7a1600, 0x00000000c2262000)
+ Metaspace       used 32334K, capacity 32772K, committed 33536K, reserved 1077248K
+  class space    used 4571K, capacity 4724K, committed 4864K, reserved 1048576K
+
+Deoptimization events (10 events):
+Event: 154.452 Thread 0x00007f7d5c2e1000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f7d4d5ebd38 method=java.util.HashMap.putVal(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object; @ 203
+Event: 154.515 Thread 0x00007f7d5c2e1000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f7d4d5ebd38 method=java.util.HashMap.putVal(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object; @ 203
+Event: 154.532 Thread 0x00007f7d5c2e1000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f7d4d583fac method=java.util.concurrent.ConcurrentHashMap.putVal(Ljava/lang/Object;Ljava/lang/Object;Z)Ljava/lang/Object; @ 192
+Event: 154.532 Thread 0x00007f7d5c2e1000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f7d4d583fac method=java.util.concurrent.ConcurrentHashMap.putVal(Ljava/lang/Object;Ljava/lang/Object;Z)Ljava/lang/Object; @ 192
+Event: 154.532 Thread 0x00007f7d5c2e1000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f7d4d583fac method=java.util.concurrent.ConcurrentHashMap.putVal(Ljava/lang/Object;Ljava/lang/Object;Z)Ljava/lang/Object; @ 192
+Event: 154.560 Thread 0x00007f7d5c2e1000 Uncommon trap: reason=range_check action=make_not_entrant pc=0x00007f7d4d4d6cc0 method=sun.reflect.generics.parser.SignatureParser.current()C @ 34
+Event: 154.560 Thread 0x00007f7d5c2e1000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f7d4d583fac method=java.util.concurrent.ConcurrentHashMap.putVal(Ljava/lang/Object;Ljava/lang/Object;Z)Ljava/lang/Object; @ 192
+Event: 154.568 Thread 0x00007f7d5c2e1000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f7d4d5ebd38 method=java.util.HashMap.putVal(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object; @ 203
+Event: 156.392 Thread 0x00007f7d5c2ec800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f7d4d6cc3e8 method=sun.awt.image.ByteInterleavedRaster.getDataElements(IILjava/lang/Object;)Ljava/lang/Object; @ 43
+Event: 156.392 Thread 0x00007f7d5c2ec800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f7d4d6d62e0 method=java.awt.image.ComponentColorModel.getRGB(Ljava/lang/Object;)I @ 4
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (10 events):
+Event: 154.566 Thread 0x00007f7d5c2e1000 Exception <a 'java/lang/ArrayIndexOutOfBoundsException': 92> (0x000000008016ec00) thrown at [/build/openjdk-8-rxFzfV/openjdk-8-8u191-b12/src/hotspot/src/share/vm/interpreter/interpreterRuntime.cpp, line 366]
+Event: 154.686 Thread 0x00007f7d5c2e1000 Exception <a 'java/lang/IncompatibleClassChangeError': Found class java.lang.Object, but interface was expected> (0x000000008030c478) thrown at [/build/openjdk-8-rxFzfV/openjdk-8-8u191-b12/src/hotspot/src/share/vm/interpreter/linkResolver.cpp, line 653]
+Event: 154.942 Thread 0x00007f7d5c2e5800 Exception <a 'sun/nio/fs/UnixException'> (0x000000008019af80) thrown at [/build/openjdk-8-rxFzfV/openjdk-8-8u191-b12/src/hotspot/src/share/vm/prims/jni.cpp, line 709]
+Event: 154.943 Thread 0x00007f7d5c2ec800 Exception <a 'sun/nio/fs/UnixException'> (0x0000000080184380) thrown at [/build/openjdk-8-rxFzfV/openjdk-8-8u191-b12/src/hotspot/src/share/vm/prims/jni.cpp, line 709]
+Event: 154.946 Thread 0x00007f7d5c2e7000 Exception <a 'sun/nio/fs/UnixException'> (0x00000000801915c8) thrown at [/build/openjdk-8-rxFzfV/openjdk-8-8u191-b12/src/hotspot/src/share/vm/prims/jni.cpp, line 709]
+Event: 154.960 Thread 0x00007f7d5c2e9000 Exception <a 'sun/nio/fs/UnixException'> (0x0000000080225678) thrown at [/build/openjdk-8-rxFzfV/openjdk-8-8u191-b12/src/hotspot/src/share/vm/prims/jni.cpp, line 709]
+Event: 154.963 Thread 0x00007f7d5c2e1000 Exception <a 'sun/nio/fs/UnixException'> (0x000000008020b2a8) thrown at [/build/openjdk-8-rxFzfV/openjdk-8-8u191-b12/src/hotspot/src/share/vm/prims/jni.cpp, line 709]
+Event: 154.996 Thread 0x00007f7d5c2ea800 Exception <a 'sun/nio/fs/UnixException'> (0x000000008032bb18) thrown at [/build/openjdk-8-rxFzfV/openjdk-8-8u191-b12/src/hotspot/src/share/vm/prims/jni.cpp, line 709]
+Event: 155.532 Thread 0x00007f7d5c2ea800 Exception <a 'java/lang/ClassNotFoundException': sun/dc/DuctusRenderingEngine> (0x0000000080d85390) thrown at [/build/openjdk-8-rxFzfV/openjdk-8-8u191-b12/src/hotspot/src/share/vm/classfile/systemDictionary.cpp, line 210]
+Event: 156.392 Thread 0x00007f7d5c2ec800 Implicit null exception at 0x00007f7d4d6cc163 to 0x00007f7d4d6cc3cd
+
+Events (10 events):
+Event: 156.544 Thread 0x00007f7d5c2e7000 DEOPT PACKING pc=0x00007f7d4d702a39 sp=0x00007f7d4c7d6fb0
+Event: 156.544 Thread 0x00007f7d5c2e7000 DEOPT UNPACKING pc=0x00007f7d4d0474c4 sp=0x00007f7d4c7d6d40 mode 0
+Event: 156.545 Thread 0x00007f7d5c2e7000 DEOPT PACKING pc=0x00007f7d4d702a39 sp=0x00007f7d4c7d6fb0
+Event: 156.545 Thread 0x00007f7d5c2e7000 DEOPT UNPACKING pc=0x00007f7d4d0474c4 sp=0x00007f7d4c7d6d40 mode 0
+Event: 156.545 Thread 0x00007f7d5c2e7000 DEOPT PACKING pc=0x00007f7d4d702a39 sp=0x00007f7d4c7d6fb0
+Event: 156.545 Thread 0x00007f7d5c2e7000 DEOPT UNPACKING pc=0x00007f7d4d0474c4 sp=0x00007f7d4c7d6d40 mode 0
+Event: 156.546 Thread 0x00007f7d5c2e7000 DEOPT PACKING pc=0x00007f7d4d702a39 sp=0x00007f7d4c7d6fb0
+Event: 156.546 Thread 0x00007f7d5c2e7000 DEOPT UNPACKING pc=0x00007f7d4d0474c4 sp=0x00007f7d4c7d6d40 mode 0
+Event: 156.597 Thread 0x00007f7d40008800 Thread exited: 0x00007f7d40008800
+Event: 157.370 Executing VM operation: GenCollectForAllocation
+
+
+Dynamic libraries:
+80000000-8bc00000 rw-p 00000000 00:00 0 
+8bc00000-aaaa0000 ---p 00000000 00:00 0 
+aaaa0000-c7df0000 rw-p 00000000 00:00 0 
+db57b000-100000000 ---p 00000000 00:00 0 
+100000000-1004c0000 rw-p 00000000 00:00 0 
+1004c0000-140000000 ---p 00000000 00:00 0 
+5654bb9e9000-5654bb9ea000 r-xp 00000000 ca:01 256445                     /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+5654bbbe9000-5654bbbea000 r--p 00000000 ca:01 256445                     /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+5654bbbea000-5654bbbeb000 rw-p 00001000 ca:01 256445                     /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+5654bcf7f000-5654bcfa0000 rw-p 00000000 00:00 0                          [heap]
+7f7d2a667000-7f7d2a66a000 ---p 00000000 00:00 0 
+7f7d2a66a000-7f7d2a768000 rw-p 00000000 00:00 0 
+7f7d2a768000-7f7d2a76b000 ---p 00000000 00:00 0 
+7f7d2a76b000-7f7d2a869000 rw-p 00000000 00:00 0 
+7f7d2a869000-7f7d2a86c000 ---p 00000000 00:00 0 
+7f7d2a86c000-7f7d2a96a000 rw-p 00000000 00:00 0 
+7f7d2a96a000-7f7d2a96d000 ---p 00000000 00:00 0 
+7f7d2a96d000-7f7d2ac6b000 rw-p 00000000 00:00 0 
+7f7d2ac6b000-7f7d2ac6e000 ---p 00000000 00:00 0 
+7f7d2ac6e000-7f7d2af6c000 rw-p 00000000 00:00 0 
+7f7d2af6c000-7f7d2b16c000 rw-p 00000000 00:00 0 
+7f7d2b16c000-7f7d2b36c000 rw-p 00000000 00:00 0 
+7f7d2b36c000-7f7d2b36f000 ---p 00000000 00:00 0 
+7f7d2b36f000-7f7d2b66d000 rw-p 00000000 00:00 0 
+7f7d2b66d000-7f7d2b670000 ---p 00000000 00:00 0 
+7f7d2b670000-7f7d2b76e000 rw-p 00000000 00:00 0 
+7f7d2b76e000-7f7d2b7d5000 r-xp 00000000 ca:01 55106                      /usr/lib/x86_64-linux-gnu/libjpeg.so.8.1.2
+7f7d2b7d5000-7f7d2b9d4000 ---p 00067000 ca:01 55106                      /usr/lib/x86_64-linux-gnu/libjpeg.so.8.1.2
+7f7d2b9d4000-7f7d2b9d5000 r--p 00066000 ca:01 55106                      /usr/lib/x86_64-linux-gnu/libjpeg.so.8.1.2
+7f7d2b9d5000-7f7d2b9d6000 rw-p 00067000 ca:01 55106                      /usr/lib/x86_64-linux-gnu/libjpeg.so.8.1.2
+7f7d2b9d6000-7f7d2b9e0000 r-xp 00000000 ca:01 256474                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjavajpeg.so
+7f7d2b9e0000-7f7d2bbe0000 ---p 0000a000 ca:01 256474                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjavajpeg.so
+7f7d2bbe0000-7f7d2bbe1000 r--p 0000a000 ca:01 256474                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjavajpeg.so
+7f7d2bbe1000-7f7d2bbe2000 rw-p 0000b000 ca:01 256474                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjavajpeg.so
+7f7d2bbe2000-7f7d2bde2000 rw-p 00000000 00:00 0 
+7f7d2bde2000-7f7d2bde9000 r-xp 00000000 ca:01 256462                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libawt_headless.so
+7f7d2bde9000-7f7d2bfe8000 ---p 00007000 ca:01 256462                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libawt_headless.so
+7f7d2bfe8000-7f7d2bfe9000 r--p 00006000 ca:01 256462                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libawt_headless.so
+7f7d2bfe9000-7f7d2bfea000 rw-p 00007000 ca:01 256462                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libawt_headless.so
+7f7d2bfea000-7f7d2c08a000 r-xp 00000000 ca:01 256461                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libawt.so
+7f7d2c08a000-7f7d2c289000 ---p 000a0000 ca:01 256461                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libawt.so
+7f7d2c289000-7f7d2c28a000 r--p 0009f000 ca:01 256461                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libawt.so
+7f7d2c28a000-7f7d2c295000 rw-p 000a0000 ca:01 256461                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libawt.so
+7f7d2c295000-7f7d2c2ba000 rw-p 00000000 00:00 0 
+7f7d2c2ba000-7f7d2c2bd000 ---p 00000000 00:00 0 
+7f7d2c2bd000-7f7d2c3bb000 rw-p 00000000 00:00 0 
+7f7d2c3bb000-7f7d2c3be000 ---p 00000000 00:00 0 
+7f7d2c3be000-7f7d2c4bc000 rw-p 00000000 00:00 0 
+7f7d2c4bc000-7f7d2c4bf000 ---p 00000000 00:00 0 
+7f7d2c4bf000-7f7d2c5bd000 rw-p 00000000 00:00 0 
+7f7d2c5bd000-7f7d2c5c0000 ---p 00000000 00:00 0 
+7f7d2c5c0000-7f7d2c8be000 rw-p 00000000 00:00 0 
+7f7d2c969000-7f7d2c96b000 r--s 00016000 ca:01 256526                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar
+7f7d2c96b000-7f7d2cb6b000 rw-p 00000000 00:00 0 
+7f7d2cb6b000-7f7d2cd6b000 rw-p 00000000 00:00 0 
+7f7d2cd6b000-7f7d2cd7e000 r--s 00346000 ca:01 256533                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar
+7f7d2cd7e000-7f7d2cd87000 r--s 0002d000 ca:01 259522                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/xml-apis-1.4.01.jar
+7f7d2cd87000-7f7d2cda0000 r--s 00135000 ca:01 258843                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/xercesImpl-2.11.0.jar
+7f7d2cda0000-7f7d2cda9000 r--s 00061000 ca:01 258490                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/velocity-engine-core-2.0.jar
+7f7d2cda9000-7f7d2cdaa000 r--s 00000000 ca:01 258847                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/unsafe-fences-1.0.jar
+7f7d2cdaa000-7f7d2cdb4000 r--s 000a0000 ca:01 257484                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/tika-core-1.19.1.jar
+7f7d2cdb4000-7f7d2cdb6000 r--s 00009000 ca:01 258492                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/slf4j-api-1.7.25.jar
+7f7d2cdb6000-7f7d2cdcf000 r--s 00102000 ca:01 257795                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/rxjava-1.2.10.jar
+7f7d2cdcf000-7f7d2cddf000 r--s 00149000 ca:01 257192                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/protobuf-java-3.5.1.jar
+7f7d2cddf000-7f7d2cdf5000 r--s 00257000 ca:01 257782                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/pdfbox-2.0.12.jar
+7f7d2cdf5000-7f7d2cdf6000 r--s 00000000 ca:01 258846                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/org.restlet.ext.slf4j-2.3.11.jar
+7f7d2cdf6000-7f7d2cdf7000 r--s 00005000 ca:01 258486                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/org.restlet.ext.servlet-2.3.11.jar
+7f7d2cdf7000-7f7d2ce01000 r--s 000a5000 ca:01 258848                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/org.restlet-2.3.11.jar
+7f7d2ce01000-7f7d2ce02000 r--s 00003000 ca:01 257789                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/options-1.4.jar
+7f7d2ce02000-7f7d2ce0b000 r--s 00061000 ca:01 257787                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/netty-transport-4.1.13.Final.jar
+7f7d2ce0b000-7f7d2ce0c000 r--s 00007000 ca:01 257193                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/netty-resolver-4.1.13.Final.jar
+7f7d2ce0c000-7f7d2ce13000 r--s 00050000 ca:01 258498                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/netty-handler-4.1.13.Final.jar
+7f7d2ce13000-7f7d2ce1f000 r--s 00077000 ca:01 258844                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/netty-common-4.1.13.Final.jar
+7f7d2ce1f000-7f7d2ce26000 r--s 00046000 ca:01 258485                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/netty-codec-4.1.13.Final.jar
+7f7d2ce26000-7f7d2ce29000 r--s 0003f000 ca:01 257483                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/netty-buffer-4.1.13.Final.jar
+7f7d2ce29000-7f7d2ce2b000 r--s 00007000 ca:01 258495                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/nailgun-server-0.9.1.jar
+7f7d2ce2b000-7f7d2ce2d000 r--s 00000000 ca:01 257781                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/modulator-1.0.jar
+7f7d2ce2d000-7f7d2ce38000 r--s 00069000 ca:01 259524                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/logback-core-1.2.3.jar
+7f7d2ce38000-7f7d2ce3e000 r--s 00041000 ca:01 257478                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/logback-classic-1.2.3.jar
+7f7d2ce3e000-7f7d2ce44000 r--s 00034000 ca:01 258491                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/libthrift-0.9.3.jar
+7f7d2ce44000-7f7d2ce55000 r--s 000bf000 ca:01 258841                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/lettuce-4.3.3.Final.jar
+7f7d2ce55000-7f7d2ce57000 r--s 00010000 ca:01 257786                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/jzlib-1.1.3.jar
+7f7d2ce57000-7f7d2ce59000 r--s 00017000 ca:01 258500                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/jsonld-java-0.10.0.jar
+7f7d2ce59000-7f7d2ce86000 r--s 0084f000 ca:01 258502                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/jruby-stdlib-9.1.17.0.jar
+7f7d2ce86000-7f7d2cf3a000 r--s 00864000 ca:01 258169                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/jruby-core-9.1.17.0.jar
+7f7d2cf3a000-7f7d2cf3d000 r--s 0002f000 ca:01 258839                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/joni-2.1.15.jar
+7f7d2cf3d000-7f7d2cf4d000 r--s 00088000 ca:01 257194                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/joda-time-2.8.1.jar
+7f7d2cf4d000-7f7d2cf50000 r--s 00033000 ca:01 258153                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/jnr-x86asm-1.0.2.jar
+7f7d2cf50000-7f7d2cf51000 r--s 0000a000 ca:01 258499                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/jnr-unixsocket-0.17.jar
+7f7d2cf51000-7f7d2cf56000 r--s 00036000 ca:01 257794                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/jnr-posix-3.0.44.jar
+7f7d2cf56000-7f7d2cf59000 r--s 0000d000 ca:01 258489                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/jnr-netdb-1.1.6.jar
+7f7d2cf59000-7f7d2cf5a000 r--s 00006000 ca:01 258487                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/jnr-enxio-0.16.jar
+7f7d2cf5a000-7f7d2cf60000 r--s 00052000 ca:01 259516                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/jnr-constants-0.9.9.jar
+7f7d2cf60000-7f7d2cf62000 r--s 00005000 ca:01 258160                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/jmespath-java-1.11.291.jar
+7f7d2cf62000-7f7d2cf65000 r--s 00022000 ca:01 258840                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/jffi-1.2.16.jar
+7f7d2cf65000-7f7d2cf67000 r--s 000a1000 ca:01 259512                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/jffi-1.2.16-native.jar
+7f7d2cf67000-7f7d2cf68000 r--s 0000c000 ca:01 257481                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/jetty-xml-9.4.12.v20180830.jar
+7f7d2cf68000-7f7d2cf6b000 r--s 0001d000 ca:01 258152                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/jetty-webapp-9.4.12.v20180830.jar
+7f7d2cf6b000-7f7d2cf73000 r--s 00073000 ca:01 259514                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/jetty-util-9.4.12.v20180830.jar
+7f7d2cf73000-7f7d2cf76000 r--s 00019000 ca:01 258166                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/jetty-servlet-9.4.12.v20180830.jar
+7f7d2cf76000-7f7d2cf7e000 r--s 0008d000 ca:01 258842                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/jetty-server-9.4.12.v20180830.jar
+7f7d2cf7e000-7f7d2cf80000 r--s 00015000 ca:01 258852                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/jetty-security-9.4.12.v20180830.jar
+7f7d2cf80000-7f7d2cf84000 r--s 0001f000 ca:01 259165                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/jetty-io-9.4.12.v20180830.jar
+7f7d2cf84000-7f7d2cf87000 r--s 0002d000 ca:01 259529                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/jetty-http-9.4.12.v20180830.jar
+7f7d2cf87000-7f7d2cf8d000 r--s 0003f000 ca:01 257482                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/jetty-client-9.4.12.v20180830.jar
+7f7d2cf8d000-7f7d2cf8f000 r--s 00001000 ca:01 259511                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/jetty-alpn-server-9.4.12.v20180830.jar
+7f7d2cf8f000-7f7d2cf91000 r--s 00001000 ca:01 258494                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/jetty-alpn-java-server-9.4.12.v20180830.jar
+7f7d2cf91000-7f7d2cf93000 r--s 00001000 ca:01 257791                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/jetty-alpn-java-client-9.4.12.v20180830.jar
+7f7d2cf93000-7f7d2cfcb000 r--s 0024e000 ca:01 259168                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/jena-shaded-guava-3.4.0.jar
+7f7d2cfcb000-7f7d2cfff000 r--s 00290000 ca:01 258496                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/jena-arq-3.4.0.jar
+7f7d2cfff000-7f7d30000000 rw-p 00000000 00:00 0 
+7f7d30000000-7f7d30a27000 rw-p 00000000 00:00 0 
+7f7d30a27000-7f7d34000000 ---p 00000000 00:00 0 
+7f7d34000000-7f7d34263000 rw-p 00000000 00:00 0 
+7f7d34263000-7f7d38000000 ---p 00000000 00:00 0 
+7f7d38000000-7f7d38021000 rw-p 00000000 00:00 0 
+7f7d38021000-7f7d3c000000 ---p 00000000 00:00 0 
+7f7d3c000000-7f7d3c9cb000 rw-p 00000000 00:00 0 
+7f7d3c9cb000-7f7d40000000 ---p 00000000 00:00 0 
+7f7d40000000-7f7d40021000 rw-p 00000000 00:00 0 
+7f7d40021000-7f7d44000000 ---p 00000000 00:00 0 
+7f7d44000000-7f7d440f7000 rw-p 00000000 00:00 0 
+7f7d440f7000-7f7d48000000 ---p 00000000 00:00 0 
+7f7d48000000-7f7d4810a000 rw-p 00000000 00:00 0 
+7f7d4810a000-7f7d4c000000 ---p 00000000 00:00 0 
+7f7d4c000000-7f7d4c001000 r--s 00001000 ca:01 258849                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/jetty-alpn-client-9.4.12.v20180830.jar
+7f7d4c001000-7f7d4c003000 r--s 00020000 ca:01 259528                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/jena-iri-3.4.0.jar
+7f7d4c003000-7f7d4c01d000 r--s 00142000 ca:01 257480                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/jena-core-3.4.0.jar
+7f7d4c01d000-7f7d4c022000 r--s 00031000 ca:01 257793                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/jena-base-3.4.0.jar
+7f7d4c022000-7f7d4c032000 r--s 00182000 ca:01 258157                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/jcodings-1.0.27.jar
+7f7d4c032000-7f7d4c034000 r--s 00003000 ca:01 258158                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/jcl-over-slf4j-1.7.25.jar
+7f7d4c034000-7f7d4c038000 r--s 00022000 ca:01 258850                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/jbig2-imageio-3.0.0.jar
+7f7d4c038000-7f7d4c03c000 r--s 0001b000 ca:01 258845                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/jaxb-api-2.3.0.jar
+7f7d4c03c000-7f7d4c03f000 r--s 00023000 ca:01 258151                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/jansi-1.13.jar
+7f7d4c03f000-7f7d4c048000 r--s 0008d000 ca:01 258159                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/janino-2.7.8.jar
+7f7d4c048000-7f7d4c059000 r--s 00106000 ca:01 259167                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/jai_imageio-1.1.jar
+7f7d4c059000-7f7d4c06d000 r--s 001bd000 ca:01 259515                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/jai_core-1.1.3.jar
+7f7d4c06d000-7f7d4c071000 r--s 0003c000 ca:01 258161                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/jai_codec-1.1.3.jar
+7f7d4c071000-7f7d4c074000 r--s 00016000 ca:01 258156                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/jackson-datatype-jsr310-2.9.5.jar
+7f7d4c074000-7f7d4c075000 r--s 0000b000 ca:01 259523                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/jackson-dataformat-cbor-2.6.7.jar
+7f7d4c075000-7f7d4c088000 r--s 00135000 ca:01 257796                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/jackson-databind-2.9.5.jar
+7f7d4c088000-7f7d4c08c000 r--s 0004b000 ca:01 258855                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/jackson-core-2.9.5.jar
+7f7d4c08c000-7f7d4c08f000 r--s 0000e000 ca:01 257476                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/jackson-annotations-2.9.5.jar
+7f7d4c08f000-7f7d4c099000 r--s 00081000 ca:01 257783                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/ion-java-1.0.2.jar
+7f7d4c099000-7f7d4c09a000 r--s 0000a000 ca:01 258163                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/invokebinder-1.10.jar
+7f7d4c09a000-7f7d4c09c000 r--s 00009000 ca:01 259517                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/imageio-ext-utilities-1.1.19.jar
+7f7d4c09c000-7f7d4c0a5000 r--s 0004d000 ca:01 258851                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/imageio-ext-tiff-1.1.19.jar
+7f7d4c0a5000-7f7d4c0a8000 r--s 0000b000 ca:01 258162                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/imageio-ext-streams-1.1.19.jar
+7f7d4c0a8000-7f7d4c0aa000 r--s 00005000 ca:01 257790                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/imageio-ext-geocore-1.1.19.jar
+7f7d4c0aa000-7f7d4c0b1000 r--s 00049000 ca:01 258501                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/httpcore-4.4.4.jar
+7f7d4c0b1000-7f7d4c0b4000 r--s 00024000 ca:01 259521                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/httpclient-cache-4.5.3.jar
+7f7d4c0b4000-7f7d4c0c1000 r--s 000a7000 ca:01 257479                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/httpclient-4.5.2.jar
+7f7d4c0c1000-7f7d4c0c3000 r--s 0000b000 ca:01 257784                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/http2-server-9.4.12.v20180830.jar
+7f7d4c0c3000-7f7d4c0c5000 r--s 00006000 ca:01 258167                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/http2-http-client-transport-9.4.12.v20180830.jar
+7f7d4c0c5000-7f7d4c0c7000 r--s 00009000 ca:01 257191                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/http2-hpack-9.4.12.v20180830.jar
+7f7d4c0c7000-7f7d4c0cb000 r--s 00028000 ca:01 259526                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/http2-common-9.4.12.v20180830.jar
+7f7d4c0cb000-7f7d4c0cc000 r--s 00004000 ca:01 258168                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/http2-client-9.4.12.v20180830.jar
+7f7d4c0cc000-7f7d4c0f8000 r--s 00208000 ca:01 257475                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/guava-19.0.jar
+7f7d4c0f8000-7f7d4c0ff000 r--s 00176000 ca:01 257195                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/fontbox-2.0.12.jar
+7f7d4c0ff000-7f7d4c106000 r--s 0004d000 ca:01 257785                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/filters-2.0.235.jar
+7f7d4c106000-7f7d4c108000 r--s 00003000 ca:01 259520                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/dirgra-0.3.jar
+7f7d4c108000-7f7d4c10a000 r--s 0000e000 ca:01 258155                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/commons-logging-1.1.3.jar
+7f7d4c10a000-7f7d4c112000 r--s 00071000 ca:01 258854                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/commons-lang3-3.6.jar
+7f7d4c112000-7f7d4c117000 r--s 00041000 ca:01 259525                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/commons-lang-2.6.jar
+7f7d4c117000-7f7d4c11b000 r--s 0002a000 ca:01 257788                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/commons-io-2.4.jar
+7f7d4c11b000-7f7d4c11c000 r--s 00009000 ca:01 258150                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/commons-csv-1.4.jar
+7f7d4c11c000-7f7d4c123000 r--s 00052000 ca:01 259513                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/commons-configuration-1.10.jar
+7f7d4c123000-7f7d4c130000 r--s 00083000 ca:01 258165                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/commons-collections-3.2.2.jar
+7f7d4c130000-7f7d4c137000 r--s 0003f000 ca:01 258497                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/commons-codec-1.10.jar
+7f7d4c137000-7f7d4c13c000 r--s 00024000 ca:01 258164                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/collection-0.7.jar
+7f7d4c13c000-7f7d4c152000 r--s 000e0000 ca:01 259527                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/caffeine-2.5.6.jar
+7f7d4c152000-7f7d4c19c000 r--s 002f4000 ca:01 259164                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/bcprov-jdk15on-1.55.jar
+7f7d4c19c000-7f7d4c1a6000 r--s 000b4000 ca:01 258853                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/azure-storage-5.2.0.jar
+7f7d4c1a6000-7f7d4c1b8000 r--s 000bb000 ca:01 257477                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/aws-java-sdk-s3-1.11.291.jar
+7f7d4c1b8000-7f7d4c1c1000 r--s 0005a000 ca:01 258154                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/aws-java-sdk-kms-1.11.291.jar
+7f7d4c1c1000-7f7d4c1d6000 r--s 000be000 ca:01 257792                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/aws-java-sdk-core-1.11.291.jar
+7f7d4c1d6000-7f7d4c3d6000 rw-p 00000000 00:00 0 
+7f7d4c3d6000-7f7d4c3d9000 ---p 00000000 00:00 0 
+7f7d4c3d9000-7f7d4c4d7000 rw-p 00000000 00:00 0 
+7f7d4c4d7000-7f7d4c4da000 ---p 00000000 00:00 0 
+7f7d4c4da000-7f7d4c5d8000 rw-p 00000000 00:00 0 
+7f7d4c5d8000-7f7d4c5db000 ---p 00000000 00:00 0 
+7f7d4c5db000-7f7d4c6d9000 rw-p 00000000 00:00 0 
+7f7d4c6d9000-7f7d4c6dc000 ---p 00000000 00:00 0 
+7f7d4c6dc000-7f7d4c7da000 rw-p 00000000 00:00 0 
+7f7d4c7da000-7f7d4c7dd000 ---p 00000000 00:00 0 
+7f7d4c7dd000-7f7d4c8db000 rw-p 00000000 00:00 0 
+7f7d4c8db000-7f7d4c8de000 ---p 00000000 00:00 0 
+7f7d4c8de000-7f7d4c9dc000 rw-p 00000000 00:00 0 
+7f7d4c9dc000-7f7d4c9df000 ---p 00000000 00:00 0 
+7f7d4c9df000-7f7d4cadd000 rw-p 00000000 00:00 0 
+7f7d4cadd000-7f7d4cae0000 ---p 00000000 00:00 0 
+7f7d4cae0000-7f7d4cbde000 rw-p 00000000 00:00 0 
+7f7d4cbde000-7f7d4cbe7000 r-xp 00000000 ca:01 256481                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libmanagement.so
+7f7d4cbe7000-7f7d4cde6000 ---p 00009000 ca:01 256481                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libmanagement.so
+7f7d4cde6000-7f7d4cde7000 r--p 00008000 ca:01 256481                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libmanagement.so
+7f7d4cde7000-7f7d4cde8000 rw-p 00009000 ca:01 256481                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libmanagement.so
+7f7d4cde8000-7f7d4cdff000 r-xp 00000000 ca:01 256483                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnet.so
+7f7d4cdff000-7f7d4cffe000 ---p 00017000 ca:01 256483                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnet.so
+7f7d4cffe000-7f7d4cfff000 r--p 00016000 ca:01 256483                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnet.so
+7f7d4cfff000-7f7d4d000000 rw-p 00017000 ca:01 256483                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnet.so
+7f7d4d000000-7f7d4d710000 rwxp 00000000 00:00 0 
+7f7d4d710000-7f7d5c000000 ---p 00000000 00:00 0 
+7f7d5c000000-7f7d5cc69000 rw-p 00000000 00:00 0 
+7f7d5cc69000-7f7d60000000 ---p 00000000 00:00 0 
+7f7d60000000-7f7d60002000 r--s 00006000 ca:01 258484                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/commons-compiler-2.7.8.jar
+7f7d60002000-7f7d60004000 r--s 0000c000 ca:01 259166                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/commons-cli-1.4.jar
+7f7d60004000-7f7d60005000 r--s 00002000 ca:01 258488                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/bytelist-1.0.15.jar
+7f7d60005000-7f7d60006000 r--s 00002000 ca:01 259519                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/azure-keyvault-core-0.8.0.jar
+7f7d60006000-7f7d60009000 r--s 00020000 ca:01 258493                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/HikariCP-2.7.2.jar
+7f7d60009000-7f7d6000e000 r--s 000a0000 ca:01 256528                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar
+7f7d6000e000-7f7d60020000 r-xp 00000000 ca:01 256484                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnio.so
+7f7d60020000-7f7d6021f000 ---p 00012000 ca:01 256484                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnio.so
+7f7d6021f000-7f7d60220000 r--p 00011000 ca:01 256484                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnio.so
+7f7d60220000-7f7d60221000 rw-p 00012000 ca:01 256484                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnio.so
+7f7d60221000-7f7d60269000 r--s 0408e000 ca:01 256230                     /home/ubuntu/ImageServer/cantaloupe-4.0.2/cantaloupe-4.0.2.war
+7f7d60269000-7f7d6026c000 r--s 0000f000 ca:01 256507                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/icedtea-sound.jar
+7f7d6026c000-7f7d6026e000 r--s 00008000 ca:01 256511                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunec.jar
+7f7d6026e000-7f7d60271000 r--s 00038000 ca:01 256513                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunpkcs11.jar
+7f7d60271000-7f7d60277000 r--s 0003b000 ca:01 256512                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunjce_provider.jar
+7f7d60277000-7f7d60292000 r--s 00394000 ca:01 256505                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/cldrdata.jar
+7f7d60292000-7f7d602ad000 r--s 001d6000 ca:01 256510                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/nashorn.jar
+7f7d602ad000-7f7d602ae000 ---p 00000000 00:00 0 
+7f7d602ae000-7f7d603ae000 rw-p 00000000 00:00 0 
+7f7d603ae000-7f7d603b1000 ---p 00000000 00:00 0 
+7f7d603b1000-7f7d604af000 rw-p 00000000 00:00 0 
+7f7d604af000-7f7d604b0000 ---p 00000000 00:00 0 
+7f7d604b0000-7f7d604b3000 ---p 00000000 00:00 0 
+7f7d604b3000-7f7d605b0000 rw-p 00000000 00:00 0 
+7f7d605b0000-7f7d605b1000 ---p 00000000 00:00 0 
+7f7d605b1000-7f7d605b4000 ---p 00000000 00:00 0 
+7f7d605b4000-7f7d606b1000 rw-p 00000000 00:00 0 
+7f7d606b1000-7f7d606b4000 ---p 00000000 00:00 0 
+7f7d606b4000-7f7d607b2000 rw-p 00000000 00:00 0 
+7f7d607b2000-7f7d607e3000 r--p 00000000 ca:01 7798                       /usr/lib/locale/C.UTF-8/LC_CTYPE
+7f7d607e3000-7f7d60956000 r--p 00000000 ca:01 7797                       /usr/lib/locale/C.UTF-8/LC_COLLATE
+7f7d60956000-7f7d60af1000 r--p 00000000 ca:01 7792                       /usr/lib/locale/locale-archive
+7f7d60af1000-7f7d60af4000 ---p 00000000 00:00 0 
+7f7d60af4000-7f7d60bf2000 rw-p 00000000 00:00 0 
+7f7d60bf2000-7f7d60bf5000 ---p 00000000 00:00 0 
+7f7d60bf5000-7f7d60cf3000 rw-p 00000000 00:00 0 
+7f7d60cf3000-7f7d60cf4000 ---p 00000000 00:00 0 
+7f7d60cf4000-7f7d60e42000 rw-p 00000000 00:00 0 
+7f7d60e42000-7f7d61011000 r--s 03c33000 ca:01 256534                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar
+7f7d61011000-7f7d61811000 rw-p 00000000 00:00 0 
+7f7d61811000-7f7d618fb000 rw-p 00000000 00:00 0 
+7f7d618fb000-7f7d61abc000 ---p 00000000 00:00 0 
+7f7d61abc000-7f7d61b1a000 rw-p 00000000 00:00 0 
+7f7d61b1a000-7f7d61c11000 ---p 00000000 00:00 0 
+7f7d61c11000-7f7d61cfb000 rw-p 00000000 00:00 0 
+7f7d61cfb000-7f7d61ebc000 ---p 00000000 00:00 0 
+7f7d61ebc000-7f7d61eda000 rw-p 00000000 00:00 0 
+7f7d61eda000-7f7d6227d000 ---p 00000000 00:00 0 
+7f7d6227d000-7f7d62285000 r-xp 00000000 ca:01 256491                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so
+7f7d62285000-7f7d62484000 ---p 00008000 ca:01 256491                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so
+7f7d62484000-7f7d62485000 r--p 00007000 ca:01 256491                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so
+7f7d62485000-7f7d62486000 rw-p 00008000 ca:01 256491                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so
+7f7d62486000-7f7d62491000 r-xp 00000000 ca:01 2089                       /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7f7d62491000-7f7d62690000 ---p 0000b000 ca:01 2089                       /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7f7d62690000-7f7d62691000 r--p 0000a000 ca:01 2089                       /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7f7d62691000-7f7d62692000 rw-p 0000b000 ca:01 2089                       /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7f7d62692000-7f7d62698000 rw-p 00000000 00:00 0 
+7f7d62698000-7f7d626af000 r-xp 00000000 ca:01 2086                       /lib/x86_64-linux-gnu/libnsl-2.27.so
+7f7d626af000-7f7d628ae000 ---p 00017000 ca:01 2086                       /lib/x86_64-linux-gnu/libnsl-2.27.so
+7f7d628ae000-7f7d628af000 r--p 00016000 ca:01 2086                       /lib/x86_64-linux-gnu/libnsl-2.27.so
+7f7d628af000-7f7d628b0000 rw-p 00017000 ca:01 2086                       /lib/x86_64-linux-gnu/libnsl-2.27.so
+7f7d628b0000-7f7d628b2000 rw-p 00000000 00:00 0 
+7f7d628b2000-7f7d628bd000 r-xp 00000000 ca:01 2091                       /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7f7d628bd000-7f7d62abc000 ---p 0000b000 ca:01 2091                       /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7f7d62abc000-7f7d62abd000 r--p 0000a000 ca:01 2091                       /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7f7d62abd000-7f7d62abe000 rw-p 0000b000 ca:01 2091                       /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7f7d62abe000-7f7d62ac6000 r-xp 00000000 ca:01 2087                       /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7f7d62ac6000-7f7d62cc6000 ---p 00008000 ca:01 2087                       /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7f7d62cc6000-7f7d62cc7000 r--p 00008000 ca:01 2087                       /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7f7d62cc7000-7f7d62cc8000 rw-p 00009000 ca:01 2087                       /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7f7d62cc8000-7f7d62cf6000 r-xp 00000000 ca:01 256472                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjava.so
+7f7d62cf6000-7f7d62ef5000 ---p 0002e000 ca:01 256472                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjava.so
+7f7d62ef5000-7f7d62ef6000 r--p 0002d000 ca:01 256472                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjava.so
+7f7d62ef6000-7f7d62ef8000 rw-p 0002e000 ca:01 256472                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjava.so
+7f7d62ef8000-7f7d62f08000 r-xp 00000000 ca:01 256490                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libverify.so
+7f7d62f08000-7f7d63107000 ---p 00010000 ca:01 256490                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libverify.so
+7f7d63107000-7f7d63109000 r--p 0000f000 ca:01 256490                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libverify.so
+7f7d63109000-7f7d6310a000 rw-p 00011000 ca:01 256490                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libverify.so
+7f7d6310a000-7f7d63111000 r-xp 00000000 ca:01 2182                       /lib/x86_64-linux-gnu/librt-2.27.so
+7f7d63111000-7f7d63310000 ---p 00007000 ca:01 2182                       /lib/x86_64-linux-gnu/librt-2.27.so
+7f7d63310000-7f7d63311000 r--p 00006000 ca:01 2182                       /lib/x86_64-linux-gnu/librt-2.27.so
+7f7d63311000-7f7d63312000 rw-p 00007000 ca:01 2182                       /lib/x86_64-linux-gnu/librt-2.27.so
+7f7d63312000-7f7d63329000 r-xp 00000000 ca:01 2065                       /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f7d63329000-7f7d63528000 ---p 00017000 ca:01 2065                       /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f7d63528000-7f7d63529000 r--p 00016000 ca:01 2065                       /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f7d63529000-7f7d6352a000 rw-p 00017000 ca:01 2065                       /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f7d6352a000-7f7d636c7000 r-xp 00000000 ca:01 2083                       /lib/x86_64-linux-gnu/libm-2.27.so
+7f7d636c7000-7f7d638c6000 ---p 0019d000 ca:01 2083                       /lib/x86_64-linux-gnu/libm-2.27.so
+7f7d638c6000-7f7d638c7000 r--p 0019c000 ca:01 2083                       /lib/x86_64-linux-gnu/libm-2.27.so
+7f7d638c7000-7f7d638c8000 rw-p 0019d000 ca:01 2083                       /lib/x86_64-linux-gnu/libm-2.27.so
+7f7d638c8000-7f7d63a46000 r-xp 00000000 ca:01 6260                       /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+7f7d63a46000-7f7d63c46000 ---p 0017e000 ca:01 6260                       /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+7f7d63c46000-7f7d63c50000 r--p 0017e000 ca:01 6260                       /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+7f7d63c50000-7f7d63c52000 rw-p 00188000 ca:01 6260                       /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+7f7d63c52000-7f7d63c56000 rw-p 00000000 00:00 0 
+7f7d63c56000-7f7d648f0000 r-xp 00000000 ca:01 256494                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7f7d648f0000-7f7d64aef000 ---p 00c9a000 ca:01 256494                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7f7d64aef000-7f7d64b83000 r--p 00c99000 ca:01 256494                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7f7d64b83000-7f7d64bac000 rw-p 00d2d000 ca:01 256494                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7f7d64bac000-7f7d64bdc000 rw-p 00000000 00:00 0 
+7f7d64bdc000-7f7d64bf6000 r-xp 00000000 ca:01 2180                       /lib/x86_64-linux-gnu/libpthread-2.27.so
+7f7d64bf6000-7f7d64df5000 ---p 0001a000 ca:01 2180                       /lib/x86_64-linux-gnu/libpthread-2.27.so
+7f7d64df5000-7f7d64df6000 r--p 00019000 ca:01 2180                       /lib/x86_64-linux-gnu/libpthread-2.27.so
+7f7d64df6000-7f7d64df7000 rw-p 0001a000 ca:01 2180                       /lib/x86_64-linux-gnu/libpthread-2.27.so
+7f7d64df7000-7f7d64dfb000 rw-p 00000000 00:00 0 
+7f7d64dfb000-7f7d64dfe000 r-xp 00000000 ca:01 2082                       /lib/x86_64-linux-gnu/libdl-2.27.so
+7f7d64dfe000-7f7d64ffd000 ---p 00003000 ca:01 2082                       /lib/x86_64-linux-gnu/libdl-2.27.so
+7f7d64ffd000-7f7d64ffe000 r--p 00002000 ca:01 2082                       /lib/x86_64-linux-gnu/libdl-2.27.so
+7f7d64ffe000-7f7d64fff000 rw-p 00003000 ca:01 2082                       /lib/x86_64-linux-gnu/libdl-2.27.so
+7f7d64fff000-7f7d6501b000 r-xp 00000000 ca:01 2185                       /lib/x86_64-linux-gnu/libz.so.1.2.11
+7f7d6501b000-7f7d6521a000 ---p 0001c000 ca:01 2185                       /lib/x86_64-linux-gnu/libz.so.1.2.11
+7f7d6521a000-7f7d6521b000 r--p 0001b000 ca:01 2185                       /lib/x86_64-linux-gnu/libz.so.1.2.11
+7f7d6521b000-7f7d6521c000 rw-p 0001c000 ca:01 2185                       /lib/x86_64-linux-gnu/libz.so.1.2.11
+7f7d6521c000-7f7d65403000 r-xp 00000000 ca:01 2079                       /lib/x86_64-linux-gnu/libc-2.27.so
+7f7d65403000-7f7d65603000 ---p 001e7000 ca:01 2079                       /lib/x86_64-linux-gnu/libc-2.27.so
+7f7d65603000-7f7d65607000 r--p 001e7000 ca:01 2079                       /lib/x86_64-linux-gnu/libc-2.27.so
+7f7d65607000-7f7d65609000 rw-p 001eb000 ca:01 2079                       /lib/x86_64-linux-gnu/libc-2.27.so
+7f7d65609000-7f7d6560d000 rw-p 00000000 00:00 0 
+7f7d6560d000-7f7d6561b000 r-xp 00000000 ca:01 256458                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so
+7f7d6561b000-7f7d6581a000 ---p 0000e000 ca:01 256458                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so
+7f7d6581a000-7f7d6581b000 r--p 0000d000 ca:01 256458                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so
+7f7d6581b000-7f7d6581c000 rw-p 0000e000 ca:01 256458                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so
+7f7d6581c000-7f7d65843000 r-xp 00000000 ca:01 2075                       /lib/x86_64-linux-gnu/ld-2.27.so
+7f7d65843000-7f7d65844000 r--s 00001000 ca:01 259518                     /tmp/jetty-0.0.0.0-80-cantaloupe-4.0.2.war-_-any-7219686337221374513.dir/webapp/WEB-INF/lib/alpn-api-1.1.3.v20160715.jar
+7f7d65844000-7f7d6584e000 r--s 00116000 ca:01 256509                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/localedata.jar
+7f7d6584e000-7f7d65850000 r--s 00001000 ca:01 256506                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/dnsns.jar
+7f7d65850000-7f7d65851000 r--s 0000a000 ca:01 256508                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/jaccess.jar
+7f7d65851000-7f7d65852000 r--s 00010000 ca:01 256514                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/zipfs.jar
+7f7d65852000-7f7d65853000 r--p 00000000 ca:01 7803                       /usr/lib/locale/C.UTF-8/LC_NUMERIC
+7f7d65853000-7f7d65854000 r--p 00000000 ca:01 7806                       /usr/lib/locale/C.UTF-8/LC_TIME
+7f7d65854000-7f7d65855000 r--p 00000000 ca:01 7801                       /usr/lib/locale/C.UTF-8/LC_MONETARY
+7f7d65855000-7f7d65856000 r--p 00000000 ca:01 7795                       /usr/lib/locale/C.UTF-8/LC_MESSAGES/SYS_LC_MESSAGES
+7f7d65856000-7f7d65857000 r--p 00000000 ca:01 7804                       /usr/lib/locale/C.UTF-8/LC_PAPER
+7f7d65857000-7f7d65858000 r--p 00000000 ca:01 7802                       /usr/lib/locale/C.UTF-8/LC_NAME
+7f7d65858000-7f7d6585f000 r--s 00000000 ca:01 5017                       /usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache
+7f7d6585f000-7f7d65930000 rw-p 00000000 00:00 0 
+7f7d65930000-7f7d65938000 rw-s 00000000 ca:01 256221                     /tmp/hsperfdata_root/4877
+7f7d65938000-7f7d65939000 ---p 00000000 00:00 0 
+7f7d65939000-7f7d6593c000 ---p 00000000 00:00 0 
+7f7d6593c000-7f7d65a3b000 rw-p 00000000 00:00 0 
+7f7d65a3b000-7f7d65a3c000 r--p 00000000 ca:01 7796                       /usr/lib/locale/C.UTF-8/LC_ADDRESS
+7f7d65a3c000-7f7d65a3d000 r--p 00000000 ca:01 7805                       /usr/lib/locale/C.UTF-8/LC_TELEPHONE
+7f7d65a3d000-7f7d65a3e000 r--p 00000000 ca:01 7800                       /usr/lib/locale/C.UTF-8/LC_MEASUREMENT
+7f7d65a3e000-7f7d65a3f000 r--p 00000000 ca:01 7799                       /usr/lib/locale/C.UTF-8/LC_IDENTIFICATION
+7f7d65a3f000-7f7d65a40000 rw-p 00000000 00:00 0 
+7f7d65a40000-7f7d65a41000 ---p 00000000 00:00 0 
+7f7d65a41000-7f7d65a43000 rw-p 00000000 00:00 0 
+7f7d65a43000-7f7d65a44000 r--p 00027000 ca:01 2075                       /lib/x86_64-linux-gnu/ld-2.27.so
+7f7d65a44000-7f7d65a45000 rw-p 00028000 ca:01 2075                       /lib/x86_64-linux-gnu/ld-2.27.so
+7f7d65a45000-7f7d65a46000 rw-p 00000000 00:00 0 
+7ffec2e82000-7ffec2ea3000 rw-p 00000000 00:00 0                          [stack]
+7ffec2f99000-7ffec2f9c000 r--p 00000000 00:00 0                          [vvar]
+7ffec2f9c000-7ffec2f9e000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -Dcantaloupe.config=/home/ubuntu/ImageServer/cantaloupe-4.0.2/cantaloupe.properties -Xmx2g 
+java_command: cantaloupe-4.0.2.war
+java_class_path (initial): cantaloupe-4.0.2.war
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+USERNAME=root
+SHELL=/bin/bash
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xab2e60], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xab2e60], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0x8e8860], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.so+0x8e8860], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.so+0x8e8860], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0x8e8860], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.so+0x8e8710], sa_mask[0]=00000000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: [libjvm.so+0x8e8d80], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGINT: [libjvm.so+0x8e8d80], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGTERM: [libjvm.so+0x8e8d80], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGQUIT: [libjvm.so+0x8e8d80], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+
+
+---------------  S Y S T E M  ---------------
+
+OS:DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=18.04
+DISTRIB_CODENAME=bionic
+DISTRIB_DESCRIPTION="Ubuntu 18.04.1 LTS"
+
+uname:Linux 4.15.0-1021-aws #21-Ubuntu SMP Tue Aug 28 10:23:07 UTC 2018 x86_64
+libc:glibc 2.27 NPTL 2.27 
+rlimit: STACK 8192k, CORE 0k, NPROC 3841, NOFILE 1048576, AS infinity
+load average:0.17 0.10 0.04
+
+/proc/meminfo:
+MemTotal:        1007540 kB
+MemFree:           71332 kB
+MemAvailable:      49760 kB
+Buffers:            1092 kB
+Cached:            79720 kB
+SwapCached:            0 kB
+Active:           814376 kB
+Inactive:          39004 kB
+Active(anon):     776888 kB
+Inactive(anon):      504 kB
+Active(file):      37488 kB
+Inactive(file):    38500 kB
+Unevictable:        5408 kB
+Mlocked:            5408 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Dirty:                60 kB
+Writeback:             0 kB
+AnonPages:        778004 kB
+Mapped:            33432 kB
+Shmem:               760 kB
+Slab:              50956 kB
+SReclaimable:      23556 kB
+SUnreclaim:        27400 kB
+KernelStack:        2480 kB
+PageTables:         6072 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:      503768 kB
+Committed_AS:    1136964 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:       61440 kB
+DirectMap2M:      987136 kB
+
+container (cgroup) information:
+container_type: cgroupv1
+cpu_cpuset_cpus: 0
+cpu_memory_nodes: 0
+active_processor_count: 1
+cpu_quota: -1
+cpu_period: 100000
+cpu_shares: -1
+memory_limit_in_bytes: -1
+memory_and_swap_limit_in_bytes: -2
+memory_soft_limit_in_bytes: -1
+memory_usage_in_bytes: 820465664
+memory_max_usage_in_bytes: 821686272
+
+
+CPU:total 1 (initial active 1) (1 cores per cpu, 1 threads per core) family 6 model 63 stepping 2, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, lzcnt, tsc, bmi1, bmi2
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 63
+model name	: Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz
+stepping	: 2
+microcode	: 0x3c
+cpu MHz		: 2399.939
+cache size	: 30720 KB
+physical id	: 0
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx rdtscp lm constant_tsc rep_good nopl xtopology cpuid pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm cpuid_fault invpcid_single pti fsgsbase bmi1 avx2 smep bmi2 erms invpcid xsaveopt
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 4800.08
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 1007540k(71332k free), swap 0k(0k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.191-b12) for linux-amd64 JRE (1.8.0_191-8u191-b12-0ubuntu0.18.04.1-b12), built on Nov 20 2018 01:07:58 by "buildd" with gcc 7.3.0
+
+time: Mon Dec 10 03:31:41 2018
+elapsed time: 157 seconds (0d 0h 2m 37s)
+

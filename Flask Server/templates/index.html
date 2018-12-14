@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="{{ url_for('static',filename='css/search.css') }}" rel="stylesheet" type="text/css" />
+<link href="{{ url_for('static',filename='css/map.css') }}"  rel="stylesheet" type="text/css" />
+<link href="{{ url_for('static',filename='css/footer.css') }}"  rel="stylesheet" type="text/css" />
+</head>     
+
+<body>
+<!--Make sure the form has the autocomplete function switched off:-->
+<form autocomplete="off" action="javascript:;" onsubmit="SearchLoc(this)" id="searchForm">
+  <div class="autocomplete">
+    <input id="roomInput" type="text" name="roomName" placeholder="Search for a Room">
+  </div>
+  <input type="Submit" value="Go">
+</form>
+<div id="openseadragon1" class="map"></div>
+<script src="{{ url_for('static',filename='scripts/openseadragon.js') }}" "Scripts/openseadragon.js"></script>
+<!--Add the map js only after viewer has been created!-->
+<script src="static/scripts/map.js"></script>
+<script src="static/scripts/search.js"></script>
+<div class="footer" id="footer"><div class="HomeIcon"></div>Home<div id="ResultNode" class="footer-result"></div></div>
+</body>
+</html>

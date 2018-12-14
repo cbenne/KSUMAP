@@ -1,0 +1,55 @@
+x,y,image,text,width,building,level
+0.4624,0.2502625,pin.png,Mapping KSU,25,1,2
+0.489,0.44625,coffee.png,Radina's,25,1,1
+0.54,0.28125,bathroom.png,,30,1,1
+0.41,0.225,bathroom.png,,30,1,1
+0.298,0.39975,men.png,,25,1,1
+0.361,0.4005,women.png,,25,1,1
+0.614,0.3945,men.png,,25,1,1
+0.55,0.3945,women.png,,25,1,1
+0.3691,0.2421375,elevator.png,,25,1,0
+0.3505625,0.2309,bathroom.png,,30,1,0
+0.4879125,0.2809,bathroom.png,,30,1,0
+0.4994375,0.46995,elevator.png,,25,1,0
+0.5662875,0.4792125,men.png,,25,1,0
+0.439325,0.1463625,arrow-up.png,To Denison Avenue,30,1,0
+0.179775,0.353375,arrow-left.png,To Ahearn Fieldhouse,30,1,0
+0.417975,0.6421375,arrow-down.png,To Seaton Hall,30,1,0
+0.6876375,0.3623625,parking.png,Engineering Parking,30,1,0
+0.3983125,0.2561875,arrow-up.png,To Floor 1,25,1,0
+0.378975,0.233575,elevator.png,,25,1,3
+0.392475,0.2903875,arrow-down.png,To Floor 2,25,1,3
+0.356725,0.219275,bathroom.png,,30,1,3
+0.537475,0.508875,elevator.png,,25,1,3
+0.458425,0.5064875,bathroom.png,,25,1,3
+0.6177125,0.516425,men.png,,25,1,3
+0.7606625,0.3646125,parking.png,Engineering Parking,30,1,3
+0.4460625,0.7118,arrow-down.png,Seaton Hall,30,1,3
+0.175275,0.3252875,arrow-left.png,Ahearn Fieldhouse,30,1,3
+0.379775,0.081475,arrow-up.png,Denison Avenue,30,1,3
+0.3769625,0.2266875,bathroom.png,,30,1,2
+0.4,0.2382125,elevator.png,,25,1,2
+0.313475,0.4311875,elevator.png,,25,1,2
+0.237075,0.439325,men.png,,25,1,2
+0.3185375,0.441575,women.png,,25,1,2
+0.477525,0.5118,bathroom.png,,30,1,2
+0.55645,0.5134875,elevator.png,,25,1,2
+0.63595,0.5205125,men.png,,25,1,2
+0.5426875,0.2873625,bathroom.png,,25,1,2
+0.4264,0.24045,elevator.png,,25,1,1
+0.5606625,0.285675,elevator.png,,25,1,1
+0.550275,0.45815,elevator.png,,25,1,1
+0.6176875,0.5691,bathroom.png,,25,1,1
+0.7224625,0.42865,parking.png,Engineering Parking,25,1,1
+0.3719,0.534275,arrow-down.png,To Seaton Hall,25,1,1
+0.237075,0.3275375,arrow-left.png,To Ahearn Fieldhouse,25,1,1
+0.479775,0.0960625,arrow-up.png,To Denison Avenue,25,1,1
+0.649425,0.25675,book.png,Fiedler Library,25,1,1
+0.4373625,0.32535,arrow-up.png,To Floor 2,25,1,1
+0.45405,0.2443,arrow-down.png,To Floor 0,25,1,1
+0.4131375,0.28125,arrow-up.png,To Floor 3,25,1,2
+0.4131375,0.36745,arrow-down.png,To Floor 1,25,1,2
+0.7666875,0.3988375,parking.png,Engineering Parking,25,1,2
+0.4194875,0.058,arrow-up.png,Denison Avenue,25,1,2
+0.162875,0.2478875,arrow-left.png,Ahearn Fieldhouse,25,1,2
+0.3479875,0.4814625,arrow-down.png,Seaton Hall,25,1,2
